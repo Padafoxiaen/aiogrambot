@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher, Router
 from aiogram.client.default import DefaultBotProperties
+from aiogram.fsm.state import State, StatesGroup
 from environs import Env
 
 # Creating an own basic environment variable
@@ -14,9 +15,14 @@ if bot_token:
         default=DefaultBotProperties(parse_mode='HTML')
     )
 else:
-    msg = 'Did you set bot_token in your environments variable?'
+    msg = 'Did you set bot token in your environments variable?'
     raise ValueError(msg)
 
 # Creating other important instances
 dp = Dispatcher()
 router = Router()
+
+
+# Create class with bot states
+class States(StatesGroup):
+    start = State()
