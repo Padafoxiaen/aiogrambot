@@ -7,6 +7,7 @@ import betterlogging as logging  # type: ignore
 
 from bot import bot, dp, router
 from bot.middlewares import middlewares_list
+from service.exception_messages import locale_not_exist
 from service.utils import setup_locales, setup_middlewares
 
 
@@ -24,8 +25,7 @@ async def main(
             setup_locales(locales)
             return
         else:
-            msg = 'You haven\'t added any locale, but executing \'init_locales\''
-            raise ValueError(msg)
+            raise ValueError(locale_not_exist)
 
     # Other bot settings
     await bot.delete_webhook(drop_pending_updates=True)
