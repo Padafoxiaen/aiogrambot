@@ -20,8 +20,12 @@ async def main(
 
     # Check if developer wants to just update locales
     if init_locales:
-        setup_locales(locales)
-        return
+        if locales:
+            setup_locales(locales)
+            return
+        else:
+            msg = 'You haven\'t added any locale, but executing \'init_locales\''
+            raise ValueError(msg)
 
     # Other bot settings
     await bot.delete_webhook(drop_pending_updates=True)
