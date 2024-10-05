@@ -16,9 +16,6 @@ async def main(
         init_locales: bool = False
 ) -> None:
 
-    # Setup logging
-    logging.basic_colorized_config(level=logging.INFO)
-
     # Check if developer wants to just update locales
     if init_locales:
         if locales:
@@ -38,4 +35,7 @@ async def main(
     await dp.start_polling(bot)
 
 if __name__ == '__main__':
+    # Setup logging
+    logging.basic_colorized_config(level=logging.INFO)
+
     asyncio.run(main(init_locales=False, locales=['en', 'uk', 'de', 'jp']))
