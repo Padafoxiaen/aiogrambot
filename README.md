@@ -2,7 +2,7 @@
 
 # Aiogrambot
 
-The special template to easily bots development based in [Aiogram 3](https://docs.aiogram.dev/en/latest/). Basicly the template was setup for beginners
+The special template to easily bots development based on [Aiogram 3](https://docs.aiogram.dev/en/latest/). Basically the template was setup for beginners
 
 # Starting
 - Just open the `.env.dist` file and rewrite it with your data
