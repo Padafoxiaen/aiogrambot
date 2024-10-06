@@ -8,4 +8,7 @@ The special template to easily bots development based in [Aiogram 3](https://doc
 - Just open the `.env.dist` file and rewrite it with your data
 - Install [Docker](https://www.docker.com/) and learn basics
 - Clone this repo and rename folder as name of your bot
-- Move to your clonned repo and run `docker-compose up`
+- Move to your clonned repo and run:
+```shell
+docker-compose up
+```
