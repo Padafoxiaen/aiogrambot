@@ -1,5 +1,11 @@
-`Please rename folder to your bot name after repo cloning`
+`!!! Please rename folder to your bot name after repo cloning !!!`
 
 # Aiogrambot
 
-The special template to easily development bots based in [Aiogram 3](https://docs.aiogram.dev/en/latest/). Basicly the template was setup for beginners
+The special template to easily bots development based in [Aiogram 3](https://docs.aiogram.dev/en/latest/). Basicly the template was setup for beginners
+
+# Starting
+- Just open the `.env.dist` file and rewrite it with your data
+- Install [Docker](https://www.docker.com/) and learn basics
+- Clone this repo and rename folder as name of your bot
+- Move to your clonned repo and run `docker-compose up`
