@@ -1,6 +1,7 @@
 from aiogram import Bot, Dispatcher, Router
 from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.state import State, StatesGroup
+from aiogram.fsm.storage.redis import RedisStorage
 from environs import Env
 
 # Creating an own basic environment variable
@@ -19,7 +20,13 @@ else:
     raise ValueError(msg)
 
 # Creating other important instances
-dp = Dispatcher()
+redis_port = basic_env.int('REDIS_PORT')
+redis_host = basic_env.str('REDIS_HOSTNAME')
+
+dp = Dispatcher(storage=RedisStorage.from_url(
+    f'redis://{redis_host}:{redis_port}/0'
+))
+
 router = Router()
 
 

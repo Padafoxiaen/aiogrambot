@@ -24,8 +24,9 @@ def setup_locales(switch: bool, locales: list[str]) -> None:
         if locales:
             cmd = [
                 'python', '-m', 'aiogram_i18n', 'multiple-extract', '-i',
-                './bot/', '-o', './bot/locales/'
+                './bot/', '-o', './bot/locales/', '--default-ftl-file', 'messages.ftl'
             ]
+
 
             for locale in locales:
                 cmd.extend(['--locales', locale])

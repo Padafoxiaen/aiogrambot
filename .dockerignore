@@ -1,0 +1,38 @@
+# Environments
+.venv/
+env/
+venv/
+
+# Python system files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+
+# Cache and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.DS_Store
+
+# Logs
+*.log
+*.tmp
+*.bak
+
+# Tests
+tests/
+docs/
+*.md
+
+# Docker files
+dockerfile
+Dockerfile
+docker-compose.yml
+
+# Other files
+.git/
+.gitignore

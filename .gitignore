@@ -1,7 +1,19 @@
 # Python cache
-*__pycache__
+*__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Cache and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.DS_Store
 
 # Environmens, variables
-venv
-.venv
+venv/
+.venv/
 .env
