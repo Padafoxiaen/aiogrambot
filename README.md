@@ -1,5 +1,3 @@
-`!!! Please rename folder to your bot name after repo cloning !!!`
-
 # Aiogrambot
 
 The special template to easily bots development based on [Aiogram 3](https://docs.aiogram.dev/en/latest/). Basically, the template was setup for beginners
