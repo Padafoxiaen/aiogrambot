@@ -13,6 +13,9 @@
 *.swn
 *.DS_Store
 
+# DB Data (Redis, PostgreSQL)
+*.rdb
+
 # Environmens, variables
 venv/
 .venv/

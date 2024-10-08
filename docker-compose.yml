@@ -1,12 +1,16 @@
 version: '3'
 services:
   aiogrambot:
+    container_name: aiogrambot
     restart: unless-stopped
     build: .
     depends_on:
       - my_redis
   my_redis:
+    container_name: my_redis
     image: redis
     restart: unless-stopped
     ports:
       - '${REDIS_PORT}:6379'
+    volumes:
+      - ./data/redis_data:/data
