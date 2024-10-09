@@ -6,11 +6,27 @@ services:
     build: .
     depends_on:
       - my_redis
+      - postgres
   my_redis:
     container_name: my_redis
     image: redis
     restart: unless-stopped
+    environment:
+      - REDIS_USER=${REDIS_USER}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
     ports:
       - '${REDIS_PORT}:6379'
     volumes:
       - ./data/redis_data:/data
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - ./data/postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DATABASE=${POSTGRES_DATABASE}
+    ports:
+      - '${POSTGRES_PORT}:5432'

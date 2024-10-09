@@ -11,7 +11,6 @@ from service.utils import setup_locales, setup_middlewares
 
 
 async def main() -> None:
-
     # Check if developer wants to just update locales
     setup_locales(switch=False, locales=['en', 'uk', 'de', 'jp'])
 
