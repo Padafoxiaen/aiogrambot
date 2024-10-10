@@ -1,1 +1,1 @@
-.env_dist linguist-language=dotenv
+.env.dist linguist-language=dotenv
