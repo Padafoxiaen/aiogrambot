@@ -9,10 +9,9 @@ services:
       - postgres
   my_redis:
     container_name: my_redis
-    image: redis
+    image: redis:latest
     restart: unless-stopped
     environment:
-      - REDIS_USER=${REDIS_USER}
       - REDIS_PASSWORD=${REDIS_PASSWORD}
     ports:
       - '${REDIS_PORT}:6379'
@@ -20,7 +19,7 @@ services:
       - ./data/redis_data:/data
   postgres:
     container_name: postgres
-    image: postgres
+    image: postgres:latest
     restart: unless-stopped
     volumes:
       - ./data/postgres_data:/var/lib/postgresql/data

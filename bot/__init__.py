@@ -20,14 +20,13 @@ else:
     raise ValueError(msg)
 
 # Creating other important instances
-redis_user = basic_env.str('REDIS_USER')
 redis_password = basic_env.str('REDIS_PASSWORD')
 redis_host = basic_env.str('REDIS_HOSTNAME')
 redis_port = basic_env.int('REDIS_PORT')
 
 
 dp = Dispatcher(storage=RedisStorage.from_url(
-    f'redis://{redis_user}:{redis_password}@{redis_host}:{redis_port}/0'
+    f'redis://default:{redis_password}@{redis_host}:{redis_port}/0'
 ))
 
 router = Router()
